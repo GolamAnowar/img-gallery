@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
+    transition: all .5s linear;
+    list-style: none;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+.row{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.colum{
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+.colum img{
+    width: 100%;
+    vertical-align: middle;
+    margin-top: 4px;
+    cursor: pointer;
+}
+.colum img.hide{
+    display: none;
+}
+.colum img.show{
+    display: block;
+}
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+.item{
+    padding: 1rem 1.5rem;
+    color: #ff4071;
+    border: .1rem solid #ff4071;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.item.active{
+    color: #fff;
+    background: #ff4071;
+}
+
+.preview-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+.preview-box .details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+.preview-box .details i{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.preview-box .image{
+    width: 100%;
+    height: 500px;
+}
+.preview-box .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.preview-box{
+    display: none;
+}
+.preview-box.active{
+    display: block;
+}
+.preview-box .icon{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.preview-box .icon i{
+    font-size: 5rem;
+    z-index: 1000;
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+}
+.preview-box .icon .bx-chevron-right{
+    right: 0;
+}
+.title{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
